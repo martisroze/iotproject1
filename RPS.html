@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<script>
+
+function compare(choice1, choice2){
+  if(choice1 === choice2){
+    alert('The result is a tie.')
+  }
+  else if(choice1 === "Rock" || choice1 === "rock"){
+    if(choice2 === "Scissors"){
+      alert('Rock beats Scissors. Player wins!')
+    }
+    else{
+      alert('Paper beats Rock. Computer wins.')
+    }
+  }
+  else if(choice1 === "Paper" || choice1 === "paper"){
+    if(choice2 === "Rock"){
+      alert('Paper beats Rock. Player wins!')
+    }
+    else{
+      alert('Scissors beats Paper. Computer wins.')
+    }
+  }
+  else if(choice1 === "Scissors" || choice1 === "scissors"){
+    if(choice2 === "Paper"){
+      alert('Scissors beats Paper. Player wins!')
+    }
+    else{
+      alert('Rock beats Scissors. Computer wins.')
+    }
+  }
+  else{
+    alert('This is not a valid option. Please try again.')
+  }
+}
+
+function playGame(){
+  var playerChoice = prompt("Rock, Paper, or Scissors?")
+  var computerChoice = Math.random();
+
+  if (computerChoice <= 0.33){
+    computerChoice = "Rock";
+  }
+  else if (computerChoice > 0.33 && computerChoice <= 0.66){
+    computerChoice = "Paper";
+  }
+  else {
+    computerChoice = "Scissors";
+  }
+  choice1 = playerChoice
+  choice2 = computerChoice
+
+  compare(choice1,choice2);
+
+  if (confirm("Play again?")){
+    playGame();
+  }
+  else {
+    alert("Thanks for playing!")
+  }
+}
+
+
+playGame();
+
+
+</script>
+</html>
