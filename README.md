@@ -1,6 +1,8 @@
 # iotproject1
 Rock Paper Scissors Javascript
 
+code is in file RPS.html
+
 Game prompts user to enter input
 User will first input either rock, paper, or scissors
 AI choice is based on Math.random() function
